@@ -1,1 +1,1 @@
-new v ya pidoras
+new version
