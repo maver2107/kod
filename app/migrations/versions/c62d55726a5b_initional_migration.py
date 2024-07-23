@@ -28,12 +28,12 @@ def upgrade() -> None:
     )
     op.create_table('rooms',
     sa.Column('id', sa.Integer(), nullable=False),
-    sa.Column('hotel_id', sa.Integer(), nullable=True),
-    sa.Column('name', sa.String(), nullable=True),
+    sa.Column('hotel_id', sa.Integer(), nullable=False),
+    sa.Column('name', sa.String(), nullable=False),
     sa.Column('description', sa.String(), nullable=True),
-    sa.Column('price', sa.Integer(), nullable=True),
+    sa.Column('price', sa.Integer(), nullable=False),
     sa.Column('services', sa.JSON(), nullable=True),
-    sa.Column('quantity', sa.Integer(), nullable=True),
+    sa.Column('quantity', sa.Integer(), nullable=False),
     sa.Column('image_id', sa.String(), nullable=True),
     sa.ForeignKeyConstraint(['hotel_id'], ['hotels.id'], ),
     sa.PrimaryKeyConstraint('id')
