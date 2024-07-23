@@ -46,3 +46,6 @@ class SBooking(BaseModel):
 @app.post("/boolings")
 def add_booking(booking: SBooking):
     pass
+
+def g():
+    pass
